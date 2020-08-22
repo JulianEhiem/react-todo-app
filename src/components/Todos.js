@@ -1,11 +1,10 @@
-import React from "react";
+import React, { Component } from "react";
+import Todoitem from "./Todoitem";
 
-function App() {
-  return (
-    <div className="App">
-      <h1>App</h1>
-    </div>
-  );
+class Todos extends Component {
+  render() {
+    return this.props.todos.map((todo) => <Todoitem todo={todo} />);
+  }
 }
 
-export default App;
+export default Todos;
